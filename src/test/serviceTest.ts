@@ -30,7 +30,7 @@ export default function run(dbConfig: IDbConfig, configDir: string) {
       })) as typeof realCreateKeyValuePair;
 
       const response = await request(app)
-        .post("/me/kvstore")
+        .post("/kvstore")
         .set("Cookie", ["border-patrol-jwt=some_jwt"]);
 
       (jwtModule as any).verify = realVerify;
@@ -53,7 +53,7 @@ export default function run(dbConfig: IDbConfig, configDir: string) {
     //   })) as typeof realCreateResource;
 
     //   const response = await request(app)
-    //     .post("/me/resources")
+    //     .post("/resources")
     //     .set("Cookie", ["border-patrol-jwt=some_jwt"]);
 
     //   (jwtModule as any).verify = realVerify;

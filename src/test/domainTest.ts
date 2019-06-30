@@ -55,23 +55,7 @@ export default function run(dbConfig: IDbConfig, configDir: string) {
 
       await selectAndMatchRows("kvstore", 1, 0, { tag: "access" });
     });
-
-    it("user.createKeyValuePair() skips when user is missing", async () => {
-      await writeSampleData();
-      const result = await userModule.createKeyValuePair(
-        "alicecooper",
-        "publickey_1",
-        "abcd",
-        "pubkey"
-      );
-      result.should.deepEqual({
-        created: false,
-        reason: "User does not exist."
-      });
-
-      await selectAndMatchRows("kvstore", 1, 0, { user_id: "jeswin" });
-    });
-
+    
     it("user.createResource() creates a resource", async () => {
       await writeSampleData();
       const result = await userModule.createResource("jeswin");

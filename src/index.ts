@@ -27,7 +27,7 @@ export async function init(configDir: string) {
   const router = new Router();
 
   /* Add a key value pair for a user */
-  router.post(`/me/kvstore`, createKeyValuePair);
+  router.post(`/kvstore`, createKeyValuePair);
 
   /* Add a resource for a user */
   router.post(`/resources`, createResource);

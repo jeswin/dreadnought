@@ -1,6 +1,6 @@
 {
   "name": "dreadnought",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Jeswin Kumar<jeswinpk@agilehead.com>",
   "contributors": [
     "Jeswin Kumar<jeswinpk@agilehead.com>"
@@ -10,7 +10,7 @@
     "test": "./build.sh && mocha --exit dist/test/test.js"
   },
   "bin": {
-    "border-patrol": "dist/index.js"
+    "dreadnought": "dist/index.js"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

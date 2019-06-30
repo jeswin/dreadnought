@@ -34,7 +34,7 @@ function run() {
 
   const port = parseInt(process.env.PORT);
 
-  describe("border-patrol", () => {
+  describe("dreadnought", () => {
     before(async function resetDb() {
       const pool = new Pool({ ...dbConfig, database: "template1" });
       

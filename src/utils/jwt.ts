@@ -11,10 +11,6 @@ export function init(c: IJWTConfig) {
   }
 }
 
-export function sign(payload: any) {
-  return jwt.sign(payload, config.privateKey, config.signOptions);
-}
-
 export type IJWT = {
   [key: string]: string;
 };

@@ -35,7 +35,6 @@ export async function init(configDir: string) {
   // Start app
   var app = new Koa();
   app.use(bodyParser());
-  app.keys = appConfig.sessionKeys.split(",");
   app.use(router.routes());
   app.use(router.allowedMethods());
 
